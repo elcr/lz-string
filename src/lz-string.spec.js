@@ -1,3 +1,5 @@
+import * as LZString from '../libs/lz-string.esm';
+
 var compressionTests = function(compress, decompress, uint8array_mode) {
     it('compresses and decompresses  "Hello world!"', function() {
         var compressed = compress('Hello world!');

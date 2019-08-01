@@ -6,7 +6,6 @@
     "bin/",
     "build/",
     "reference/",
-    "tests/",
     "src/"
   ],
   "keywords": ["compression", "lzw", "string"]
