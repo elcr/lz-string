@@ -3,9 +3,6 @@ import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import { terser } from 'rollup-plugin-terser';
-import minimist from 'minimist';
-
-const argv = minimist(process.argv.slice(2));
 
 const baseConfig = {
 	input: 'src/lz-string.js',
@@ -82,6 +79,7 @@ typeof angular !== 'undefined' && angular !== null ? (
       return instance;
     })
 ) :`;
+					// eslint-disable-next-line no-param-reassign
 					bundle[filename].code = bundle[filename].code
 						.replace(
 							/(define\(\['exports'], factory\) :)/,
@@ -113,4 +111,4 @@ typeof angular !== 'undefined' && angular !== null ? (
 			}),
 		],
 	},
-]
+];
